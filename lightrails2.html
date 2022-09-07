@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Thanicha Ruangmas, Geoffrey Zhang">
+
+<title>The Impact of Light Rails on Air Pollution</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="lightrails2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lightrails2_files/libs/quarto-html/quarto.js"></script>
+<script src="lightrails2_files/libs/quarto-html/popper.min.js"></script>
+<script src="lightrails2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="lightrails2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="lightrails2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lightrails2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="lightrails2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="lightrails2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="lightrails2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Impact of Light Rails on Air Pollution</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Thanicha Ruangmas, Geoffrey Zhang </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Air pollution is harming human health. According to the <span class="citation" data-cites="world_health_organization_ambient_nodate">(<a href="#ref-world_health_organization_ambient_nodate" role="doc-biblioref">World Health Organization, 2021</a>)</span>, around the world, 99 percent of the human population is exposed to harmful levels of air pollution. In America, a major contributing factor to air pollution is heavy traffic congestion near urban centers, a problem made worse by the car-centric environment of the United States <span class="citation" data-cites="pucher_united_1996">(<a href="#ref-pucher_united_1996" role="doc-biblioref">Pucher &amp; Lefèvre, 1996</a>)</span>. To combat traffic congestion, urban cities around the country are turning to various public transit solutions to take cars off the road and reduce air pollution. One such solution is light rail, a form of public transit that combines features from buses and subways. Compared to buses, light rails are higher capacity and operate more frequently in urban areas. Furthermore, since light rails run on electricity, they are more environmentally friendly than bus routes. Light rails also have the advantage over subways of running above ground, requiring less construction to build a new system. As such, light rails often stop at more locations and can reach more residents <span class="citation" data-cites="texas_am_transportation_institute_light-rail_nodate">(<a href="#ref-texas_am_transportation_institute_light-rail_nodate" role="doc-biblioref">Texas A&amp;M Transportation Institute, n.d.</a>)</span>.</p>
+<p>Our study aims to quantify the air pollution impact of opening a light rail system in an urban center. We hypothesize that opening such a system will reduce air pollution in a city by taking cars off the road, a finding that similar studies on other modes of public transportation have found. Past studies have focused on subway systems or have focused on non-US countries, and have typically simulated the impact of an opening. Our ex-post study aims to introduce new findings that simulations cannot capture, presenting critical evidence to help policymakers build more public transportation in urban centers.</p>
+<!--# TR will describe Identification Strategy -->
+</section>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
+<!--# Add Literature Review here -->
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<section id="light-rail-routes" class="level3">
+<h3 class="anchored" data-anchor-id="light-rail-routes">Light Rail Routes</h3>
+<!--# GZ explain why the four cities were chosen -->
+</section>
+<section id="pm2.5" class="level3">
+<h3 class="anchored" data-anchor-id="pm2.5">PM2.5</h3>
+<p>To calculate PM2.5 in an urban center, we use a dataset from Washington University in St.&nbsp;Louis’s Atmospheric Composition Analysis Group that estimates ground-level PM2.5 from 2000 to 2018. The North American Regional Estimates (V4.NA.03) dataset estimates monthly ground-level PM2.5 by combining Aerosol Optical Depth (AOD) data from NASA’s MODIS, MISR, and SeaWIFS instruments, providing us with air pollution data across the United States at a gridded resolution of 0.01°. We use this data to calculate the monthly mean PM2.5 before and after the opening of a light rail system for a 10km buffer around each of our control cities’ city centers. City center coordinates were found by using the Google Maps Geocoding API.</p>
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-pucher_united_1996" class="csl-entry" role="doc-biblioentry">
+Pucher, J., &amp; Lefèvre, C. (1996). The united states: The car-dependent society. In <em>The urban transport crisis in europe and north america</em> (pp. 175–200). Palgrave Macmillan <span>UK</span>. <a href="https://doi.org/10.1057/9780230371835_10">https://doi.org/10.1057/9780230371835_10</a>
+</div>
+<div id="ref-texas_am_transportation_institute_light-rail_nodate" class="csl-entry" role="doc-biblioentry">
+Texas A&amp;M Transportation Institute. (n.d.). <em>Light-rail transit (<span>LRT</span>)</em>. <a href="https://policy.tti.tamu.edu/strategy/light-rail-transit/">https://policy.tti.tamu.edu/strategy/light-rail-transit/</a>
+</div>
+<div id="ref-world_health_organization_ambient_nodate" class="csl-entry" role="doc-biblioentry">
+World Health Organization. (2021, September 22). <em>Ambient (outdoor) air pollution</em>. <a href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health">https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health</a>
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
