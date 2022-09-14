@@ -11,7 +11,7 @@ Light Rails and Air Pollution
 
 Thanicha Ruangmas and Geoffrey Zhang
 
-AREC Research Workshop on September 26, 2022
+AREC Research Workshop on September 26, 2022
 
 ## Intro
 
