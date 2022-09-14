@@ -1,0 +1,26 @@
+---
+title: "Light Rails and Air Pollution"
+author: "Thanicha Ruangmas and Geoffrey Zhang"
+format: revealjs
+editor: visual
+---
+
+## Title Slide
+
+Light Rails and Air Pollution
+
+Thanicha Ruangmas and Geoffrey Zhang
+
+AREC Research Workshop on September 26, 2022
+
+## Intro
+
+<!--# GZ work on this -->
+
+## Literature Review
+
+<!--# GZ review papers' conclutions -->
+
+<!--# TR looks at methodology -->
+
+## Data
