@@ -15,7 +15,23 @@ AREC Research Workshop on September 26, 2022
 
 ## Intro
 
+::: columns
+::: {.column width="55%"}
+-   Air pollution is an urgent issue harming human health.
+
+    -   90% of the world's population is exposed to harmful pollution levels each year (WHO)
+
+-   Has been exacerbated by traffic congestion in urban areas.
+
+-   Cities are looking to build mass transit to reduce air pollution.
+:::
+
+::: {.column width="45%"}
+![](images/traffic-01.png){width="100%"}
+:::
+
 <!--# GZ work on this -->
+:::
 
 ## Literature Review
 
