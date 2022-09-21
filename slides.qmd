@@ -1,43 +1,20 @@
 ---
 title: "Light Rails and Air Pollution"
-author: Lillian Hsu, Terence Lo, Thanicha Ruangmas, Jillian Wimbush, Geoffrey Zhang
-format: 
-  revealjs: 
-    theme: simple
-    slide-number: true
-    smaller: true
-execute:
-  echo: false
-  warning: false
+author: "Thanicha Ruangmas and Geoffrey Zhang"
+format: revealjs
 editor: visual
 ---
 
-## Monthly Average PM2.5
+## Title Slide
 
-For each city, we draw a 10 km buffer around the original light rail line, and find the monthly average of all data points within the buffer area.
+Light Rails and Air Pollution
 
-+----------------------------------------------+-------------------------------------------+
-| Charlotte-Concord-Gastonia metropolitan area | PM2.5 data points within the 10 km buffer |
-|                                              |                                           |
-| ![](map1_charlotte.png){width="364"}         | ![](map2_charlotte.png){width="304"}      |
-+----------------------------------------------+-------------------------------------------+
+Thanicha Ruangmas and Geoffrey Zhang
 
-<<<<<<< HEAD
-## Summary Statistics
-=======
 AREC Research Workshop on September 26, 2022
->>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
 
-Our period of study is in four cities from January 2001 to December 2011, before any light rail expansion occurred.
+## Intro
 
-<<<<<<< HEAD
- 
-
-```{r}
-
-library("tidyverse")
-library("kableExtra")
-=======
 ::: columns
 ::: {.column width="55%"}
 -   Air pollution is an urgent issue harming human health.
@@ -78,137 +55,9 @@ library("kableExtra")
 
 -   Our study contributes an important look at light rails and air pollution within the context of the United States, where a car-centric culture dictates urban planing.
 :::
->>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
 
-df<-read.csv("G:/Shared drives/2022 FIRE-SA/ARCHIVED - SUMMER INTERNSHIP/CODE/combined.csv")
+<!--# TR looks at methodology -->
 
-<<<<<<< HEAD
-ss<-df %>%
-  ungroup() %>%
-  filter(year<=2011) %>%
-  dplyr::group_by(city, lr_op) %>%
-  dplyr::summarise(avgpm25=mean(meanpm25),
-                   sdpm25=sd(meanpm25), 
-                   maxpm25=max(meanpm25),
-                   obs=n(),
-                   .groups = 'keep')
-
-op<-c("Nov 2007","", "Jan 2004", "","Jun 2004","", "Dec 2008","")
-cit<-c("Charlotte", "","Houston","", "Minneapolis", "","Phoenix","")
-
-op2<-as.data.frame(cbind(cit,op,ss[,2:6]))
-  
-op2 %>%
-  kbl(digits=1, col.names = c("City", 
-                              "Opening Date",
-                              "Opening Status",
-                              "Avg PM2.5",
-                              "SD PM2.5",
-                              "Max PM2.5",
-                              "Obs")) %>%
-  kable_styling()
-```
-
-## Summary Statistics
-
--   According to the EPA NAAQs standard, annual mean PM2.5, averaged across three years should not exceed $12 \mu g / m^3$.
-
--   None of the counties we are studying had non-attainment status for PM2.5, but Maricopa County in Arizona has partial non-attainment status for PM10.
-
-```{r}
-
-op2 %>%
-  kbl(digits=1, col.names = c("City", 
-                              "Opening Date",
-                              "Opening Status",
-                              "Avg PM2.5",
-                              "SD PM2.5",
-                              "Max PM2.5",
-                              "Obs")) %>%
-  kable_styling()
-
-```
-
-## Average Effect Empirical Strategy
-
--   Similar to Gendron-Carrier et al. (2022) we examine the changes in ground-level PM2.5 alongside the sharp opening dates of light rails.
-
--   We compare PM2.5 levels before and after light rail openings with the regression:
-
-$$
-P_{it} = \beta_i + \alpha_1 D_{it} + \gamma' X_{it} + \epsilon_{it}
-$$
-
-where $D_{it}=1$ when light rail in city $i$ in month $t$ has opened, and $D_{it}=0$ otherwise.
-
--   Other controls include city fixed effects, year fixed effects, city-month of year fixed effects to capture city-level pollution trends.
-
--   We also include linear and quadratic climate variables such as cloud cover percentage, frost day frequency, mean temperature, precipitation, and vapor pressure.
-
-## Average Effect Results
-
-|                 |              |         |            |         |            |
-|:----------------|:------------:|:-------:|:----------:|:-------:|:----------:|
-|                 |    \(1\)     |  \(2\)  |   \(3\)    |  \(4\)  |   \(5\)    |
-| Post            | -0.862\*\*\* | -0.566  | -0.915\*\* | -0.192  |   -0.148   |
-|                 |   (0.213)    | (0.371) |  (0.387)   | (0.854) |  (0.839)   |
-| Post $\times$ t |              |         |            |         | -0.221\*\* |
-|                 |              |         |            |         |  (0.095)   |
-| Year FE         |      N       |    Y    |     N      |    Y    |     Y      |
-| Observations    |     528      |   528   |    148     |   148   |    148     |
-| Adjusted R2     |    0.437     |  0.452  |   0.488    |  0.503  |    0.52    |
-
--   Note: \*p\<0.1; \*\*p\<0.05; \*\*\*p\<0.01
-
--   \(1\) and (2) show results when all observations from year 2001 to 2011 are included.
-
--   \(3\) to (5) include observations 18 months before and 18 months after opening.
-
--   All regressions include city FE, city-month FE, linear and quadratic climate controls.
-
-## City Effect Results
-
-|                           |    \(1\)     | \(2\)  |
-|---------------------------|:------------:|:------:|
-| Post $\times$ Charlotte   | -1.471\*\*\* | -0.806 |
-| Post $\times$ Houston     |    -0.067    | -1.307 |
-| Post $\times$ Minneapolis |    -0.46     | -0.476 |
-| Post $\times$ Phoenix     |    -0.017    |  1.73  |
-| Observations              |     528      |  148   |
-| Adjusted R2               |    0.457     | 0.504  |
-
--   Note: \*p\<0.1; \*\*p\<0.05; \*\*\*p\<0.01
-
--   \(1\) show results when all observations from year 2001 to 2011 are included.
-
--   \(2\) include observations 18 months before and 18 months after opening.
-
--   All regressions include year FE, city FE, city-month FE, linear and quadratic climate controls.
-
-## Event Study Empirical Strategy
-
--   In an event study, we compare PM2.5 levels each month, 18 months before and after light rail openings. Our regression specification is:
-
-$$
-P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \epsilon_{it}
-$$
-
--   Let $D_{it} (j)$ represent dummy variables that is equal to 1 when our observation is $j$ months since the light rail opened in city $i$ at month $t$.
-
--   $\alpha_j$ represents the impact of light rail opening in month $j$ after opening.
-
--   We ran the regression for two time periods; from 2001 to 2011 across all cities, and the 18 months before and 18 months after light rail opening in each city.
-
--   Other controls include city fixed effects, year fixed effects, city-month fixed effects, linear and quadratic climate variables, and the number of PM2.5 data points.
-
-## Event Study Results
-
--   In other regression, we restrict our data to include only the 18 month period before and after light rail openings in each city.
-
--   The graph below shows the values of $\hat{\alpha_j}$ from the regression equation $P_{it}=\beta_i + \sum_{j} \alpha_j D_{it} (j) + \gamma' X_{it} + \epsilon_{it}$
-
-## ![](images/event.png){width="416" height="277"}
-=======
 ## Data: Light Rail Routes {.smaller}
 
 ::: columns
@@ -251,4 +100,3 @@ $$
 ![](images/images_large_es-2018-06392k_0001.jpeg){.absolute right="0" top="15"}
 :::
 :::
->>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
