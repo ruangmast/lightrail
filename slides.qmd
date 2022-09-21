@@ -26,11 +26,12 @@ AREC Research Workshop on September 26, 2022
 -   Cities are looking to build mass transit to reduce air pollution.
 :::
 
-::: {.column width="45%"}
-![](images/traffic-01.png){width="100%"}
+::: {.column width="5%"}
 :::
 
-<!--# GZ work on this -->
+::: {.column width="40%"}
+![](images/traffic-01.png){.r-stretch .absolute bottom="30"}
+:::
 :::
 
 ## Literature Review
@@ -39,4 +40,48 @@ AREC Research Workshop on September 26, 2022
 
 <!--# TR looks at methodology -->
 
+## Data {.smaller}
+
+##### Light Rail Routes
+
+::: columns
+::: {.column .r-fit-text width="60%"}
+-   Light rail systems in the United States can be divided into two categories: first-generation legacy systems and second-generation modern systems.
+
+-   We focus on second-generation systems in our study opened after the 2000s (our PM2.5 dataset has data from 2000 to 2018).
+
+-   We picked systems in cities where light rail was the primary mode of rail transit, allowing us to isolate air pollution effects resulting from the opening of a light rail.
+
+-   Cities with a population of at least 1 million residents were picked to ensure light rails were in urban cities.
+
+-   After considering these criteria, our panel of cities was narrowed down to four systems:
+
+    **Charlotte, NC's LYNX system, Houston, TX's METRORail system, Minneapolis-St. Paul, MN's METRO system, and Seattle, WA's Link system.**
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="35%"}
+![](images/METRORail_7-02.jpg)
+:::
+:::
+
 ## Data
+
+##### PM2.5
+::: columns
+::: {.column .r-fit-text width="55%"}
+-   To calculate PM2.5, we use the North America Regional Estimates of Chemical Composition of Fine Particulate Matter (V4.NA.03) dataset from Washington University in St. Louis that estimates ground-level PM2.5 from 2000 to 2018.
+
+-   This dataset estimates PM2.5 by combining Aerosol Optical Depth (AOD) data from NASA's MODIS, MISR, and SeaWIFS instruments, providing us with air pollution data across the United States at a gridded resolution of 0.01°.
+
+-   We use this data to calculate the monthly mean PM2.5 before and after the opening of a light rail system for a 10km buffer around each of our control cities' city centers.
+
+-   City center coordinates were found by using the Google Maps Geocoding API.
+:::
+
+::: {.column width="45%"}
+![](images/images_large_es-2018-06392k_0001.jpeg){.absolute right="0" top="15"}
+:::
+:::

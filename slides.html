@@ -341,9 +341,11 @@
 <li><p>Has been exacerbated by traffic congestion in urban areas.</p></li>
 <li><p>Cities are looking to build mass transit to reduce air pollution.</p></li>
 </ul>
-</div><div class="column" style="width:45%;">
-<p><img data-src="images/traffic-01.png" style="width:100.0%"></p>
-</div><!--# GZ work on this -->
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<img data-src="images/traffic-01.png" class="r-stretch absolute" style="bottom: 30px; ">
+</div>
 </div>
 </section>
 <section id="literature-review" class="slide level2">
@@ -351,8 +353,41 @@
 <!--# GZ review papers' conclutions -->
 <!--# TR looks at methodology -->
 </section>
-<section id="data" class="slide level2">
+<section id="data" class="slide level2 smaller">
 <h2>Data</h2>
+<h5 id="light-rail-routes">Light Rail Routes</h5>
+<div class="columns">
+<div class="column r-fit-text" style="width:60%;">
+<ul>
+<li><p>Light rail systems in the United States can be divided into two categories: first-generation legacy systems and second-generation modern systems.</p></li>
+<li><p>We focus on second-generation systems in our study opened after the 2000s (our PM2.5 dataset has data from 2000 to 2018).</p></li>
+<li><p>We picked systems in cities where light rail was the primary mode of rail transit, allowing us to isolate air pollution effects resulting from the opening of a light rail.</p></li>
+<li><p>Cities with a population of at least 1 million residents were picked to ensure light rails were in urban cities.</p></li>
+<li><p>After considering these criteria, our panel of cities was narrowed down to four systems:</p>
+<p><strong>Charlotte, NC’s LYNX system, Houston, TX’s METRORail system, Minneapolis-St.&nbsp;Paul, MN’s METRO system, and Seattle, WA’s Link system.</strong></p></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/METRORail_7-02.jpg"></p>
+</div>
+</div>
+</section>
+<section id="data-1" class="slide level2">
+<h2>Data</h2>
+<h5 id="pm2.5">PM2.5</h5>
+<div class="columns">
+<div class="column r-fit-text" style="width:55%;">
+<ul>
+<li><p>To calculate PM2.5, we use the North America Regional Estimates of Chemical Composition of Fine Particulate Matter (V4.NA.03) dataset from Washington University in St.&nbsp;Louis that estimates ground-level PM2.5 from 2000 to 2018.</p></li>
+<li><p>This dataset estimates PM2.5 by combining Aerosol Optical Depth (AOD) data from NASA’s MODIS, MISR, and SeaWIFS instruments, providing us with air pollution data across the United States at a gridded resolution of 0.01°.</p></li>
+<li><p>We use this data to calculate the monthly mean PM2.5 before and after the opening of a light rail system for a 10km buffer around each of our control cities’ city centers.</p></li>
+<li><p>City center coordinates were found by using the Google Maps Geocoding API.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/images_large_es-2018-06392k_0001.jpeg" class="absolute" style="top: 15px; right: 0px; "></p>
+</div>
+</div>
 <div class="footer footer-default">
 
 </div>
