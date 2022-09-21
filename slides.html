@@ -9,7 +9,11 @@
 <link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
+<<<<<<< HEAD
   <meta name="author" content="Lillian Hsu, Terence Lo, Thanicha Ruangmas, Jillian Wimbush, Geoffrey Zhang">
+=======
+  <meta name="author" content="Thanicha Ruangmas and Geoffrey Zhang">
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
   <title>Light Rails and Air Pollution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -313,9 +317,12 @@
       margin-right: 0; 
     }
   </style>
+<<<<<<< HEAD
   
   <script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+=======
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -323,6 +330,7 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Light Rails and Air Pollution</h1>
+<<<<<<< HEAD
   <p class="author">Lillian Hsu, Terence Lo, Thanicha Ruangmas, Jillian Wimbush, Geoffrey Zhang</p>
 </section>
 
@@ -720,6 +728,103 @@ P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \eps
 
 </div>
 </section>
+=======
+  <p class="author">Thanicha Ruangmas and Geoffrey Zhang</p>
+</section>
+
+<section id="title-slide" class="slide level2">
+<h2>Title Slide</h2>
+<p>Light Rails and Air Pollution</p>
+<p>Thanicha Ruangmas and Geoffrey Zhang</p>
+<p>AREC Research Workshop on September 26, 2022</p>
+</section>
+<section id="intro" class="slide level2">
+<h2>Intro</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Air pollution is an urgent issue harming human health.</p>
+<ul>
+<li>90% of the world population is exposed to harmful pollution levels each year.</li>
+</ul></li>
+<li><p>Has been exacerbated by traffic congestion in urban areas.</p></li>
+<li><p>Cities are looking to build mass transit to reduce air pollution.</p></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<img data-src="images/traffic-01.png" class="r-stretch absolute" style="bottom: 30px; ">
+</div>
+</div>
+</section>
+<section>
+<section id="so-does-opening-a-light-rail-system-improve-air-quality" class="title-slide slide level1 center">
+<h1><strong>So, does opening a light rail system improve air quality?</strong></h1>
+
+</section>
+<section id="literature-review" class="slide level2 smaller">
+<h2>Literature Review</h2>
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Previous public transit and air pollution studies indicate that building public transit will generally decrease air pollution in urban centers. Few studies, however, focus on light rails and their ability to impact air pollution.</p></li>
+<li><p><em>Gendron-Carrier et al., 2022</em> found that the opening of subways decreased PM2.5 and PM10 in a 10 km radius around urban centers that had high air pollution prior to a system opening.</p></li>
+<li><p><em>Xie et al., 2019</em>, which looked at subway openings in 15 cities in China, found an average reduction of PM2.5 of 19 percent after a system was opened . This same study, however, found that ozone levels rose about 12 percent after a system was opened.</p></li>
+</ul>
+</div>
+</section>
+<section id="literature-review-1" class="slide level2 smaller">
+<h2>Literature Review</h2>
+<div class="column" style="width:55%;">
+<ul>
+<li><p><em>Park &amp; Sener, 2019</em> notably focuses on a light rail system in Houston, Texas, and found that carbon monoxide levels decreased by 24 percent two years after Houston’s light rail system opened.</p></li>
+<li><p><em>Fageda, 2021</em> looks at the opening of light rails across 98 mid-sized European cities, and found that air pollution was reduced by an average of 3 percent after a light rail system opened.</p></li>
+<li><p>Our study contributes an important look at light rails and air pollution within the context of the United States, where a car-centric culture dictates urban planing.</p></li>
+</ul>
+</div>
+<!--# TR looks at methodology -->
+</section>
+<section id="data-light-rail-routes" class="slide level2 smaller">
+<h2>Data: Light Rail Routes</h2>
+<div class="columns">
+<div class="column r-fit-text" style="width:56%;">
+<ul>
+<li><p>Light rail systems in the United States can be divided into two categories: first-generation legacy systems and second-generation modern systems.</p></li>
+<li><p>We focus on second-generation systems in our study opened after the 2000s (our PM2.5 dataset has data from 2000 to 2018).</p></li>
+<li><p>We picked systems in cities where light rail was the primary mode of rail transit, allowing us to isolate air pollution effects resulting from the opening of a light rail.</p></li>
+<li><p>Cities with a population of at least 1 million residents were picked to ensure light rails were in urban cities.</p></li>
+<li><p>After considering these criteria, our panel of cities was narrowed down to four systems:</p>
+<p><strong>Charlotte, NC’s LYNX system, Houston, TX’s METRORail system, Minneapolis-St.&nbsp;Paul, MN’s METRO system, and Phoenix, AZ’s Valley Metro Rail system.</strong></p></li>
+</ul>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:43%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/METRORail_7-02.jpg"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-pm2.5" class="slide level2">
+<h2>Data: PM2.5</h2>
+<div class="columns">
+<div class="column r-fit-text" style="width:55%;">
+<ul>
+<li><p>To calculate PM2.5, we use the North America Regional Estimates of Chemical Composition of Fine Particulate Matter (V4.NA.03) dataset from Washington University in St.&nbsp;Louis that estimates ground-level PM2.5 from 2000 to 2018.</p></li>
+<li><p>This dataset estimates PM2.5 by combining Aerosol Optical Depth (AOD) data from NASA’s MODIS, MISR, and SeaWIFS instruments, providing us with air pollution data across the United States at a gridded resolution of 0.01°.</p></li>
+<li><p>We use this data to calculate the monthly mean PM2.5 before and after the opening of a light rail system for a 10km buffer around each of our control cities’ city centers.</p></li>
+<li><p>City center coordinates were found by using the Google Maps Geocoding API.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/images_large_es-2018-06392k_0001.jpeg" class="absolute" style="top: 15px; right: 0px; "></p>
+</div>
+</div>
+<div class="footer footer-default">
+
+</div>
+</section></section>
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
     </div>
   </div>
 
@@ -746,13 +851,21 @@ P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \eps
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+<<<<<<< HEAD
 'smaller': true,
+=======
+'smaller': false,
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+<<<<<<< HEAD
 'smaller': true,
+=======
+'smaller': false,
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
  
         // Display controls in the bottom right corner
         controls: false,
@@ -772,7 +885,11 @@ P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \eps
         progress: true,
 
         // Display the page number of the current slide
+<<<<<<< HEAD
         slideNumber: 'c/t',
+=======
+        slideNumber: false,
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -931,6 +1048,7 @@ P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \eps
         ]
       });
     </script>
+<<<<<<< HEAD
     
     <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
@@ -973,6 +1091,8 @@ P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \eps
       })();
     </script>
 
+=======
+>>>>>>> 6247eb91efb904ef1fc6217c81cdef186df8e859
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
