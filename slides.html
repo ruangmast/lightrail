@@ -9,7 +9,7 @@
 <link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <meta name="author" content="Thanicha Ruangmas and Geoffrey Zhang">
+  <meta name="author" content="Lillian Hsu, Terence Lo, Thanicha Ruangmas, Jillian Wimbush, Geoffrey Zhang">
   <title>Light Rails and Air Pollution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -313,6 +313,9 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -320,47 +323,399 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Light Rails and Air Pollution</h1>
-  <p class="author">Thanicha Ruangmas and Geoffrey Zhang</p>
+  <p class="author">Lillian Hsu, Terence Lo, Thanicha Ruangmas, Jillian Wimbush, Geoffrey Zhang</p>
 </section>
 
-<section id="intro" class="slide level2">
-<h2>Intro</h2>
-<!--# GZ work on this -->
+<section id="monthly-average-pm2.5" class="slide level2">
+<h2>Monthly Average PM2.5</h2>
+<p>For each city, we draw a 10 km buffer around the original light rail line, and find the monthly average of all data points within the buffer area.</p>
+<table>
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Charlotte-Concord-Gastonia metropolitan area</p>
+<p><img data-src="map1_charlotte.png" width="364"></p></td>
+<td><p>PM2.5 data points within the 10 km buffer</p>
+<p><img data-src="map2_charlotte.png" width="304"></p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="literature-review" class="slide level2">
-<h2>Literature Review</h2>
-<!--# GZ review papers' conclutions -->
-<!--# TR review methodology -->
+<section id="summary-statistics" class="slide level2">
+<h2>Summary Statistics</h2>
+<p>Our period of study is in four cities from January 2001 to December 2011, before any light rail expansion occurred.</p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> City </th>
+   <th style="text-align:left;"> Opening Date </th>
+   <th style="text-align:right;"> Opening Status </th>
+   <th style="text-align:right;"> Avg PM2.5 </th>
+   <th style="text-align:right;"> SD PM2.5 </th>
+   <th style="text-align:right;"> Max PM2.5 </th>
+   <th style="text-align:right;"> Obs </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Charlotte </td>
+   <td style="text-align:left;"> Nov 2007 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.4 </td>
+   <td style="text-align:right;"> 3.2 </td>
+   <td style="text-align:right;"> 24.2 </td>
+   <td style="text-align:right;"> 83 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.1 </td>
+   <td style="text-align:right;"> 2.4 </td>
+   <td style="text-align:right;"> 16.8 </td>
+   <td style="text-align:right;"> 49 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Houston </td>
+   <td style="text-align:left;"> Jan 2004 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.6 </td>
+   <td style="text-align:right;"> 2.1 </td>
+   <td style="text-align:right;"> 17.8 </td>
+   <td style="text-align:right;"> 36 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.7 </td>
+   <td style="text-align:right;"> 1.9 </td>
+   <td style="text-align:right;"> 17.2 </td>
+   <td style="text-align:right;"> 96 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Minneapolis </td>
+   <td style="text-align:left;"> Jun 2004 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 10.4 </td>
+   <td style="text-align:right;"> 2.8 </td>
+   <td style="text-align:right;"> 20.9 </td>
+   <td style="text-align:right;"> 42 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 21.2 </td>
+   <td style="text-align:right;"> 90 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Phoenix </td>
+   <td style="text-align:left;"> Dec 2008 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 9.4 </td>
+   <td style="text-align:right;"> 2.6 </td>
+   <td style="text-align:right;"> 19.5 </td>
+   <td style="text-align:right;"> 96 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 8.5 </td>
+   <td style="text-align:right;"> 2.0 </td>
+   <td style="text-align:right;"> 13.8 </td>
+   <td style="text-align:right;"> 36 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </section>
-<section id="research-context" class="slide level2">
-<h2>Research Context</h2>
-<!--# GZ discuss what cities we are looking at and why -->
-</section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<!--# GZ work on this -->
+<section id="summary-statistics-1" class="slide level2">
+<h2>Summary Statistics</h2>
 <ul>
-<li><p>Light Rail Routes</p></li>
-<li><p>PM2.5</p></li>
-<li><p>Meteorology</p></li>
+<li><p>According to the EPA NAAQs standard, annual mean PM2.5, averaged across three years should not exceed <span class="math inline">\(12 \mu g / m^3\)</span>.</p></li>
+<li><p>None of the counties we are studying had non-attainment status for PM2.5, but Maricopa County in Arizona has partial non-attainment status for PM10.</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> City </th>
+   <th style="text-align:left;"> Opening Date </th>
+   <th style="text-align:right;"> Opening Status </th>
+   <th style="text-align:right;"> Avg PM2.5 </th>
+   <th style="text-align:right;"> SD PM2.5 </th>
+   <th style="text-align:right;"> Max PM2.5 </th>
+   <th style="text-align:right;"> Obs </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Charlotte </td>
+   <td style="text-align:left;"> Nov 2007 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.4 </td>
+   <td style="text-align:right;"> 3.2 </td>
+   <td style="text-align:right;"> 24.2 </td>
+   <td style="text-align:right;"> 83 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.1 </td>
+   <td style="text-align:right;"> 2.4 </td>
+   <td style="text-align:right;"> 16.8 </td>
+   <td style="text-align:right;"> 49 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Houston </td>
+   <td style="text-align:left;"> Jan 2004 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.6 </td>
+   <td style="text-align:right;"> 2.1 </td>
+   <td style="text-align:right;"> 17.8 </td>
+   <td style="text-align:right;"> 36 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.7 </td>
+   <td style="text-align:right;"> 1.9 </td>
+   <td style="text-align:right;"> 17.2 </td>
+   <td style="text-align:right;"> 96 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Minneapolis </td>
+   <td style="text-align:left;"> Jun 2004 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 10.4 </td>
+   <td style="text-align:right;"> 2.8 </td>
+   <td style="text-align:right;"> 20.9 </td>
+   <td style="text-align:right;"> 42 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 21.2 </td>
+   <td style="text-align:right;"> 90 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Phoenix </td>
+   <td style="text-align:left;"> Dec 2008 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 9.4 </td>
+   <td style="text-align:right;"> 2.6 </td>
+   <td style="text-align:right;"> 19.5 </td>
+   <td style="text-align:right;"> 96 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 8.5 </td>
+   <td style="text-align:right;"> 2.0 </td>
+   <td style="text-align:right;"> 13.8 </td>
+   <td style="text-align:right;"> 36 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="average-effect-empirical-strategy" class="slide level2">
+<h2>Average Effect Empirical Strategy</h2>
+<ul>
+<li><p>Similar to Gendron-Carrier et al.&nbsp;(2022) we examine the changes in ground-level PM2.5 alongside the sharp opening dates of light rails.</p></li>
+<li><p>We compare PM2.5 levels before and after light rail openings with the regression:</p></li>
+</ul>
+<p><span class="math display">\[
+P_{it} = \beta_i + \alpha_1 D_{it} + \gamma' X_{it} + \epsilon_{it}
+\]</span></p>
+<p>where <span class="math inline">\(D_{it}=1\)</span> when light rail in city <span class="math inline">\(i\)</span> in month <span class="math inline">\(t\)</span> has opened, and <span class="math inline">\(D_{it}=0\)</span> otherwise.</p>
+<ul>
+<li><p>Other controls include city fixed effects, year fixed effects, city-month of year fixed effects to capture city-level pollution trends.</p></li>
+<li><p>We also include linear and quadratic climate variables such as cloud cover percentage, frost day frequency, mean temperature, precipitation, and vapor pressure.</p></li>
 </ul>
 </section>
-<section id="empirical-strategy" class="slide level2">
-<h2>Empirical Strategy</h2>
-<!--# TR work on this -->
+<section id="average-effect-results" class="slide level2">
+<h2>Average Effect Results</h2>
+<table>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;">(1)</td>
+<td style="text-align: center;">(2)</td>
+<td style="text-align: center;">(3)</td>
+<td style="text-align: center;">(4)</td>
+<td style="text-align: center;">(5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Post</td>
+<td style="text-align: center;">-0.862***</td>
+<td style="text-align: center;">-0.566</td>
+<td style="text-align: center;">-0.915**</td>
+<td style="text-align: center;">-0.192</td>
+<td style="text-align: center;">-0.148</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;">(0.213)</td>
+<td style="text-align: center;">(0.371)</td>
+<td style="text-align: center;">(0.387)</td>
+<td style="text-align: center;">(0.854)</td>
+<td style="text-align: center;">(0.839)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Post <span class="math inline">\(\times\)</span> t</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-0.221**</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">(0.095)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year FE</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">Y</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">Y</td>
+<td style="text-align: center;">Y</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Observations</td>
+<td style="text-align: center;">528</td>
+<td style="text-align: center;">528</td>
+<td style="text-align: center;">148</td>
+<td style="text-align: center;">148</td>
+<td style="text-align: center;">148</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adjusted R2</td>
+<td style="text-align: center;">0.437</td>
+<td style="text-align: center;">0.452</td>
+<td style="text-align: center;">0.488</td>
+<td style="text-align: center;">0.503</td>
+<td style="text-align: center;">0.52</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Note: *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</p></li>
+<li><p>(1) and (2) show results when all observations from year 2001 to 2011 are included.</p></li>
+<li><p>(3) to (5) include observations 18 months before and 18 months after opening.</p></li>
+<li><p>All regressions include city FE, city-month FE, linear and quadratic climate controls.</p></li>
+</ul>
 </section>
-<section id="regression-results" class="slide level2">
-<h2><strong>Regression Results</strong></h2>
-<!--# TR work on this -->
+<section id="city-effect-results" class="slide level2">
+<h2>City Effect Results</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">(1)</th>
+<th style="text-align: center;">(2)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Post <span class="math inline">\(\times\)</span> Charlotte</td>
+<td style="text-align: center;">-1.471***</td>
+<td style="text-align: center;">-0.806</td>
+</tr>
+<tr class="even">
+<td>Post <span class="math inline">\(\times\)</span> Houston</td>
+<td style="text-align: center;">-0.067</td>
+<td style="text-align: center;">-1.307</td>
+</tr>
+<tr class="odd">
+<td>Post <span class="math inline">\(\times\)</span> Minneapolis</td>
+<td style="text-align: center;">-0.46</td>
+<td style="text-align: center;">-0.476</td>
+</tr>
+<tr class="even">
+<td>Post <span class="math inline">\(\times\)</span> Phoenix</td>
+<td style="text-align: center;">-0.017</td>
+<td style="text-align: center;">1.73</td>
+</tr>
+<tr class="odd">
+<td>Observations</td>
+<td style="text-align: center;">528</td>
+<td style="text-align: center;">148</td>
+</tr>
+<tr class="even">
+<td>Adjusted R2</td>
+<td style="text-align: center;">0.457</td>
+<td style="text-align: center;">0.504</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Note: *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</p></li>
+<li><p>(1) show results when all observations from year 2001 to 2011 are included.</p></li>
+<li><p>(2) include observations 18 months before and 18 months after opening.</p></li>
+<li><p>All regressions include year FE, city FE, city-month FE, linear and quadratic climate controls.</p></li>
+</ul>
 </section>
-<section id="conclusion" class="slide level2">
-<h2><strong>Conclusion</strong></h2>
+<section id="event-study-empirical-strategy" class="slide level2">
+<h2>Event Study Empirical Strategy</h2>
+<ul>
+<li>In an event study, we compare PM2.5 levels each month, 18 months before and after light rail openings. Our regression specification is:</li>
+</ul>
+<p><span class="math display">\[
+P_{it}=\beta_i + \sum_{j = -18,..18} \alpha_j D_{it} (j) + \gamma' X_{it} + \epsilon_{it}
+\]</span></p>
+<ul>
+<li><p>Let <span class="math inline">\(D_{it} (j)\)</span> represent dummy variables that is equal to 1 when our observation is <span class="math inline">\(j\)</span> months since the light rail opened in city <span class="math inline">\(i\)</span> at month <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(\alpha_j\)</span> represents the impact of light rail opening in month <span class="math inline">\(j\)</span> after opening.</p></li>
+<li><p>We ran the regression for two time periods; from 2001 to 2011 across all cities, and the 18 months before and 18 months after light rail opening in each city.</p></li>
+<li><p>Other controls include city fixed effects, year fixed effects, city-month fixed effects, linear and quadratic climate variables, and the number of PM2.5 data points.</p></li>
+</ul>
 </section>
-<section id="discussion" class="slide level2">
-<h2><strong>Discussion</strong></h2>
+<section id="event-study-results" class="slide level2">
+<h2>Event Study Results</h2>
+<ul>
+<li><p>In other regression, we restrict our data to include only the 18 month period before and after light rail openings in each city.</p></li>
+<li><p>The graph below shows the values of <span class="math inline">\(\hat{\alpha_j}\)</span> from the regression equation <span class="math inline">\(P_{it}=\beta_i + \sum_{j} \alpha_j D_{it} (j) + \gamma' X_{it} + \epsilon_{it}\)</span></p></li>
+</ul>
 </section>
 <section id="section" class="slide level2">
-<h2></h2>
+<h2><img data-src="images/event.png" width="416" height="277"></h2>
 <div class="footer footer-default">
 
 </div>
@@ -391,13 +746,13 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
+'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -417,7 +772,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -576,6 +931,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
