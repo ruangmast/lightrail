@@ -5,13 +5,13 @@ format: revealjs
 editor: visual
 ---
 
-## Title Slide
+## Light Rails and Air Pollution
 
-Light Rails and Air Pollution
+Geoffrey Zhang
 
-Thanicha Ruangmas and Geoffrey Zhang
+**AREC Research Workshop**
 
-AREC Research Workshop on September 26, 2022
+September 26, 2022
 
 ## Intro
 
@@ -21,6 +21,32 @@ AREC Research Workshop on September 26, 2022
 
 <!--# GZ review papers' conclutions -->
 
-<!--# TR looks at methodology -->
+<!--# TR review methodology -->
+
+## Research Context
+
+<!--# GZ discuss what cities we are looking at and why -->
 
 ## Data
+
+<!--# GZ work on this -->
+
+-   Light Rail Routes
+
+-   PM2.5
+
+-   Meteorology
+
+## Empirical Strategy
+
+<!--# TR work on this -->
+
+## **Regression Results**
+
+<!--# TR work on this -->
+
+## **Conclusion** 
+
+## **Discussion**
+
+## 
